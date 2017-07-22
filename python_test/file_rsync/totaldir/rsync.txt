@@ -1,0 +1,38 @@
+
+linux（服务器）:
+安装rsync：
+检查rsync是否安装:
+rpm -qa rsync
+没安装就进行yum安装
+yum install rsync
+
+创建配置文件:
+/etc/rsyncd.conf
+创建密码文件(文件名可以自己修改):
+/etc/rsyncd.password 
+修改密码文件权限
+chmod 600 /etc/rsyncd.password
+启动rsync服务器及防火墙的设置:
+将/etc/xinetd.d/rsync文件的disable字段设置为no
+service xinetd restart
+rsync --daemon --config=/etc/rsyncd.conf
+查看873端口是否开放：
+lsof -i:873
+没开放就添加防火墙规则:
+vim  /etc/sysconfig/iptables
+
+-A INPUT -p tcp -m tcp --dport 873 -j ACCEPT
+
+特别注意：
+SELinux关闭:
+方法一：
+/etc/selinux/config
+SELINUX=disabled.
+方法二：
+setenforce 0
+
+
+
+
+windows（客户端）:
+下载并解压cwrsync包，找到rsync.exe可执行文件即可用python调用

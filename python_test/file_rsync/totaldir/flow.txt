@@ -1,0 +1,10 @@
+python要求版本最低2.7
+
+linux:
+安装配置rsync
+pip安装watchdog和pyzmq包
+
+
+windows:
+安装watchdog和pyzma包
+下载rsync客户端

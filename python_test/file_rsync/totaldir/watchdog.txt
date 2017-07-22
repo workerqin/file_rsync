@@ -1,0 +1,16 @@
+
+安装步骤具体详见:
+https://pypi.python.org/pypi/watchdog/0.8.3
+
+
+linux:
+pip install watchdog
+
+
+windows:
+先安装python
+下载pyyaml：http://pyyaml.org/download/pyyaml/PyYAML-3.12.win-amd64-py2.7.exe
+下载源码包:
+watchdog-0.8.3.tar.gz (md5)
+解压安装:
+python setup.py install

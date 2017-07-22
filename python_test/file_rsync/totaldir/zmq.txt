@@ -1,0 +1,16 @@
+python¿âpyzmqµÄ°²×°:http://zeromq.org/bindings:python
+linux:
+pip install pyzmq
+
+
+
+windows:
+https://github.com/zeromq/pyzmq/downloads
+pyzmq-2.2.0.win-amd64-py2.7.msi
+
+
+
+
+
+
+
